@@ -1,20 +1,21 @@
 import './App.css';
 
-import Header from './components/Header';
-import Showcollection from './components/Showcollection';
-import Products from './components/Products';
-import NewArrival from './components/NewArrival';
+// import Header from './components/Header';
+// import Showcollection from './components/Showcollection';
+// import Products from './components/Products';
+// import NewArrival from './components/NewArrival';
+import Userdashboard from './Pages/user/Userdashboard';
 
 
 
 function App() {
   return ( 
     <div className="App">
-
-      <Header/>
+      <Userdashboard/>
+      {/* <Header/>
       <Showcollection/>
       <Products/>
-      <NewArrival/>
+      <NewArrival/> */}
 
     </div>
   );
