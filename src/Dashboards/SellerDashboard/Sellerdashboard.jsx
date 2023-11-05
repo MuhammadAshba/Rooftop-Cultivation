@@ -1,6 +1,9 @@
 
 import React, { useState } from 'react';
 import { FaBars } from 'react-icons/fa';
+import { MdSpaceDashboard } from 'react-icons/md';
+import { GiPlantRoots } from 'react-icons/gi';
+
 import { FaAccusoft } from 'react-icons/fa';
 import { MdOutlinePayments } from 'react-icons/md';
 import { CgProfile } from 'react-icons/cg';
@@ -9,7 +12,7 @@ import { MdOutlineDomainVerification } from 'react-icons/md';
 import { TbTruckReturn } from 'react-icons/tb';
 
 
-const Userdashboard = () => {
+const Sellerdashboard = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const toggleSidebar = () => {
@@ -23,21 +26,26 @@ const Userdashboard = () => {
         className={`pt-[30px] w-[243px] rounded lg:pt-0 bg-green-600 text-white h-screen fixed top-0 left-0 overflow-y-auto transition-transform transform ${isSidebarOpen ? 'w-[300px]' : '-translate-x-full '
           } lg:translate-x-0`}
       >
-        <h1 className='pt-6 text-2xl font-bold text-center '>User Dashboard</h1>
+        <h1 className='pt-8 text-2xl font-bold text-center '>Seller Dashboard</h1>
 
-        <ol className='pt-3 text-lg cursor-pointer'>
-          <li className='pt-2 pb-2 pl-6 rounded-md hover:bg-green-500'>< FaAccusoft className="inline text-white" />
-            &nbsp; Track Orders</li>
+        <ol className='pt-5 text-lg cursor-pointer'>
+        <li className='pt-2 pb-2 pl-6 rounded-md hover:bg-green-500'>< MdSpaceDashboard className="inline text-white" />
+            &nbsp; Dashboard</li>
+        <li className='pt-2 pb-2 pl-6 rounded-md hover:bg-green-500'>< GiPlantRoots className="inline text-white" />
+            &nbsp; Add plant</li>
+        <li className='pt-2 pb-2 pl-6 rounded-md hover:bg-green-500'>< FaAccusoft className="inline text-white" />
+            &nbsp;Orders</li>
           <li className='pt-4 pb-2 pl-6 rounded-md hover:bg-green-500'> < MdOutlinePayments className="inline text-white" /> &nbsp;
             Payments history</li>
           <li className='pt-4 pb-2 pl-6 rounded-md hover:bg-green-500'>< CgProfile className="inline text-white" /> &nbsp;
-            Profile</li>
+            Your nursery</li>
           <li className='pt-4 pb-2 pl-6 rounded-md hover:bg-green-500'>< IoIosNotificationsOutline className="inline text-white" /> &nbsp;
             Notifications</li>
           <li className='pt-4 pb-2 pl-6 rounded-md hover:bg-green-500'>< MdOutlineDomainVerification className="inline text-white" /> &nbsp;
             Verify Profile</li>
           <li className='pt-4 pb-2 pl-6 rounded-md hover:bg-green-500'>< TbTruckReturn className="inline text-white" /> &nbsp;
             Returns</li>
+         
         </ol>
       </aside>
 
@@ -76,4 +84,4 @@ const Userdashboard = () => {
   );
 };
 
-export default Userdashboard;
+export default Sellerdashboard;

@@ -1,21 +1,29 @@
 import './App.css';
 
-// import Header from './components/Header';
-// import Showcollection from './components/Showcollection';
-// import Products from './components/Products';
-// import NewArrival from './components/NewArrival';
-import Userdashboard from './Dashboards/BuyerDashboard/Userdashboard';
+import Header from './components/Header';
+import Showcollection from './components/Showcollection';
+import Products from './components/Products';
+import NewArrival from './components/NewArrival';
+// import Buyerdashboard from './Dashboards/BuyerDashboard/Buyerdashboard';
+// import Admindashboard from './Dashboards/AdminDashboard/Adminashboard';
+// import Sellerdashboard from './Dashboards/SellerDashboard/Sellerdashboard';
+
+
 
 
 
 function App() {
   return ( 
     <div className="App">
-      <Userdashboard/>
-      {/* <Header/>
+      
+      {/* <Buyerdashboard/> */}
+       {/* <Sellerdashboard/> */}
+      {/* <Admindashboard/> */}
+      
+      <Header/>
       <Showcollection/>
       <Products/>
-      <NewArrival/> */}
+      <NewArrival/>
 
     </div>
   );
