@@ -4,7 +4,7 @@ import './App.css';
 // import Showcollection from './components/Showcollection';
 // import Products from './components/Products';
 // import NewArrival from './components/NewArrival';
-import Userdashboard from './Pages/user/Userdashboard';
+import Userdashboard from './Dashboards/BuyerDashboard/Userdashboard';
 
 
 

@@ -3,3 +3,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body,
+html {
+  font-family: Outfit,sans-serif!important;
+  
+
+  
+}
