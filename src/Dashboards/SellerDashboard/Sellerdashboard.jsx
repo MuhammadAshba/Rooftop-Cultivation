@@ -1,6 +1,7 @@
 
 import React, { useState } from 'react';
 import { FaBars } from 'react-icons/fa';
+
 import { MdSpaceDashboard } from 'react-icons/md';
 import { GiPlantRoots } from 'react-icons/gi';
 
@@ -10,9 +11,17 @@ import { CgProfile } from 'react-icons/cg';
 import { IoIosNotificationsOutline } from 'react-icons/io';
 import { MdOutlineDomainVerification } from 'react-icons/md';
 import { TbTruckReturn } from 'react-icons/tb';
+import { Route, Routes, Link } from 'react-router-dom';
+
+import Sellerdashboardcontent from './SellerdashboardContent';
+import Profileverify from './Profileverify';
+import Addplant from './Addplant';
+
 
 
 const Sellerdashboard = () => {
+
+
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const toggleSidebar = () => {
@@ -29,46 +38,42 @@ const Sellerdashboard = () => {
         <h1 className='pt-8 text-2xl font-bold text-center '>Seller Dashboard</h1>
 
         <ol className='pt-5 text-lg cursor-pointer'>
-        <li className='pt-2 pb-2 pl-6 rounded-md hover:bg-green-500'>< MdSpaceDashboard className="inline text-white" />
-            &nbsp; Dashboard</li>
-        <li className='pt-2 pb-2 pl-6 rounded-md hover:bg-green-500'>< GiPlantRoots className="inline text-white" />
+          <Link to="/SellerDashboard">
+            <li className='pt-2 pb-2 pl-6 rounded-md hover:bg-green-500'>< MdSpaceDashboard className="inline text-white" />
+              &nbsp; Dashboard
+            </li>
+          </Link>
+          <Link to="/addplant">
+          <li className='pt-2 pb-2 pl-6 rounded-md hover:bg-green-500'>< GiPlantRoots className="inline text-white" />
             &nbsp; Add plant</li>
-        <li className='pt-2 pb-2 pl-6 rounded-md hover:bg-green-500'>< FaAccusoft className="inline text-white" />
-            &nbsp;Orders</li>
+            </Link>
+          <li className='pt-2 pb-2 pl-6 rounded-md hover:bg-green-500'>< FaAccusoft className="inline text-white" /> &nbsp;
+            Orders</li>
           <li className='pt-4 pb-2 pl-6 rounded-md hover:bg-green-500'> < MdOutlinePayments className="inline text-white" /> &nbsp;
             Payments history</li>
           <li className='pt-4 pb-2 pl-6 rounded-md hover:bg-green-500'>< CgProfile className="inline text-white" /> &nbsp;
             Your nursery</li>
           <li className='pt-4 pb-2 pl-6 rounded-md hover:bg-green-500'>< IoIosNotificationsOutline className="inline text-white" /> &nbsp;
             Notifications</li>
-          <li className='pt-4 pb-2 pl-6 rounded-md hover:bg-green-500'>< MdOutlineDomainVerification className="inline text-white" /> &nbsp;
-            Verify Profile</li>
+
+          <Link to="/Profileverify" ><li className='pt-4 pb-2 pl-6 rounded-md hover:bg-green-500'>< MdOutlineDomainVerification className="inline text-white" /> &nbsp;
+            Verify Profile</li> </Link>
+            
           <li className='pt-4 pb-2 pl-6 rounded-md hover:bg-green-500'>< TbTruckReturn className="inline text-white" /> &nbsp;
             Returns</li>
-         
+
         </ol>
       </aside>
 
-      {/* Main Content */}
-      <div className={`p-4 lg:ml-64 lg:md-64 lg:pl-0 w-65 sm:w-[100vw] mt-10 lg:mt-0 lg:w-[cal(100vw-243px)] `}>
-        <div class="bg-white py-24 sm:py-32">
-          <div class="mx-auto max-w-7xl px-6 lg:px-8">
-            <dl class="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-3">
-              <div class="mx-auto flex max-w-xs flex-col gap-y-4">
-                <dt class="text-base leading-7 text-gray-600">Transactions every 24 hours</dt>
-                <dd class="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-5xl">44 million</dd>
-              </div>
-              <div class="mx-auto flex max-w-xs flex-col gap-y-4">
-                <dt class="text-base leading-7 text-gray-600">Assets under holding</dt>
-                <dd class="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-5xl">$119 trillion</dd>
-              </div>
-              <div class="mx-auto flex max-w-xs flex-col gap-y-4">
-                <dt class="text-base leading-7 text-gray-600">New users annually</dt>
-                <dd class="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-5xl">46,000</dd>
-              </div>
-            </dl>
-          </div>
-        </div>
+
+      {/*Routing*/}
+      <div className={`p-4 lg:ml-64 lg:md-64 lg:pl-0 w-65 sm:w-[100vw] mt-10 lg:mt-0 lg:w-[cal(100vw-243px)] m-auto `}>
+
+        <Routes>
+          <Route path="/SellerDashboard" element={<Sellerdashboardcontent />}></Route>
+          <Route path="/Profileverify" element={<Profileverify />}></Route>
+          <Route path="/addplant" element={<Addplant />}></Route>
+        </Routes>
 
       </div>
 
