@@ -59,7 +59,6 @@ const Sellerdashboardcontent = () => {
              <dt class=" leading-7 text-gray-600 text-xl">44pkr</dt>
              <dd class="order-first text-2xl font-semibold tracking-tight text-gray-900 sm:text-2xl">Total sales</dd>
            </div>
-           
            <div class="mx-auto flex  flex-col gap-y-4 border-2 md:p-10 py-3  rounded-2xl  bg-slate-200 px-10 w-[235px]  md:w-[245px]">
              <dt class=" leading-7 text-gray-600 text-xl">14</dt>
              <dd class="order-first text-2xl font-semibold tracking-tight text-gray-900 sm:text-2xl">Total Orders</dd>

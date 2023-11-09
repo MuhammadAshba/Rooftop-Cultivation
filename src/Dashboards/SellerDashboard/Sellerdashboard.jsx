@@ -67,7 +67,7 @@ const Sellerdashboard = () => {
 
 
       {/*Routing*/}
-      <div className={`p-4 lg:ml-64 lg:md-64 lg:pl-0 w-65 sm:w-[100vw] mt-10 lg:mt-0 lg:w-[cal(100vw-243px)] m-auto `}>
+      <div className={`md:p-4 lg:ml-64 lg:md-64 lg:pl-0 w-65 sm:w-[100vw] mt-10 lg:mt-0 lg:w-[cal(100vw-243px)] m-auto `}>
 
         <Routes>
           <Route path="/SellerDashboard" element={<Sellerdashboardcontent />}></Route>
