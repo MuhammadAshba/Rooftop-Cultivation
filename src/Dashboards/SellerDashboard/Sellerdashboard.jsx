@@ -7,6 +7,7 @@ import { GiPlantRoots } from 'react-icons/gi';
 
 import { FaAccusoft } from 'react-icons/fa';
 import { MdOutlinePayments } from 'react-icons/md';
+import { BsShopWindow } from 'react-icons/bs';
 import { CgProfile } from 'react-icons/cg';
 import { IoIosNotificationsOutline } from 'react-icons/io';
 import { MdOutlineDomainVerification } from 'react-icons/md';
@@ -16,7 +17,9 @@ import { Route, Routes, Link } from 'react-router-dom';
 import Sellerdashboardcontent from './SellerdashboardContent';
 import Profileverify from './Profileverify';
 import Addplant from './Addplant';
-
+import Orders from './Orders';
+import PaymentHistory from './PaymentHistory';
+import Yournurcery from './YourNurcery';
 
 
 const Sellerdashboard = () => {
@@ -47,12 +50,21 @@ const Sellerdashboard = () => {
           <li className='pt-2 pb-2 pl-6 rounded-md hover:bg-green-500'>< GiPlantRoots className="inline text-white" />
             &nbsp; Add plant</li>
             </Link>
+          
+          <li className='pt-2 pb-2 pl-6 rounded-md hover:bg-green-500'>< BsShopWindow className="inline text-white" />
+            &nbsp; All Products</li>
+           
+            <Link to="/myorders">
           <li className='pt-2 pb-2 pl-6 rounded-md hover:bg-green-500'>< FaAccusoft className="inline text-white" /> &nbsp;
-            Orders</li>
+            Orders</li></Link>
+            <Link to="/paymenthistory">
           <li className='pt-4 pb-2 pl-6 rounded-md hover:bg-green-500'> < MdOutlinePayments className="inline text-white" /> &nbsp;
             Payments history</li>
+            </Link>
+            <Link to="/yournurcery">
           <li className='pt-4 pb-2 pl-6 rounded-md hover:bg-green-500'>< CgProfile className="inline text-white" /> &nbsp;
-            Your nursery</li>
+            Your nursery</li></Link>
+            
           <li className='pt-4 pb-2 pl-6 rounded-md hover:bg-green-500'>< IoIosNotificationsOutline className="inline text-white" /> &nbsp;
             Notifications</li>
 
@@ -73,6 +85,9 @@ const Sellerdashboard = () => {
           <Route path="/SellerDashboard" element={<Sellerdashboardcontent />}></Route>
           <Route path="/Profileverify" element={<Profileverify />}></Route>
           <Route path="/addplant" element={<Addplant />}></Route>
+          <Route path="/myorders" element={<Orders />}></Route>
+          <Route path="/paymenthistory" element={<PaymentHistory />}></Route>
+          <Route path="/yournurcery" element={<Yournurcery />}></Route>
         </Routes>
 
       </div>

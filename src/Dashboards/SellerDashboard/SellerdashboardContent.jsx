@@ -47,7 +47,7 @@ const Sellerdashboardcontent = () => {
     <div>
         
     <div className='w-full bg-slate-200  rounded-2xl h-[5%] md:p-5 p-7 sm:pb-8 md:h-[35%] shadow-md'>
-     <h2 className='order-first text-2xl font-semibold tracking-tight text-center text-gray-900 sm:text-2xl md:pt-9 '>Welcome to Seller center</h2>
+     <h2 className='order-first text-2xl font-semibold tracking-tight text-center text-gray-900 sm:text-2xl md:pt-8 '>Welcome to Seller center</h2>
     </div>
 
      <div class="bg-white py-5 md:py-10 md:mt-3 ">

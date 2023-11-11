@@ -17,7 +17,7 @@ const getBase64 = (file) =>
     reader.onerror = (error) => reject(error);
   });
 
-function Addplant() {
+function Yournurcery() {
 
   ////picture upload start
   const [previewOpen, setPreviewOpen] = useState(false);
@@ -56,31 +56,23 @@ function Addplant() {
   return (
     <>
       <div className='w-full bg-green-100  rounded-2xl h-[5%] md:p-5 p-7 sm:pb-8 md:h-[35%] shadow-md'>
-        <h2 className='order-first text-2xl font-semibold tracking-tight text-center text-gray-900 sm:text-2xl md:pt-4 '>Add Your Plant</h2>
+        <h2 className='order-first text-2xl font-semibold tracking-tight text-center text-gray-900 sm:text-2xl md:pt-4 '>Your Nursery Profile</h2>
       </div>
 
       <div className='content-center md:p-3 mt-7' >
 
 
-        <h1 className='pt-3 text-xl md:p-2'>Enter Name</h1>
-        <input className='inline p-2 border-2 rounded-xl w-[100%]' type="text" placeholder='Product name' />
+        <h1 className='pt-3 text-xl md:p-2'>Business Name</h1>
+        <input className='inline p-2 border-2 rounded-xl w-[100%]' type="text" placeholder='Business Name' />
 
-        <h1 className='pt-3 text-xl md:p-2'>Enter Price</h1>
-        <input className='inline p-2 border-2 rounded-xl w-[100%]' type="text" placeholder='Product price' />
+        <h1 className='pt-3 text-xl md:p-2'>Business Location</h1>
+        <input className='inline p-2 border-2 rounded-xl w-[100%]' type="text" placeholder='Business Location' />
 
-        <h1 className='pt-3 text-xl md:p-2'>Choose category</h1>
-        <select className='inline p-2 border-2 rounded-xl w-[100%]'>
-          <option value="someOption">Some option</option>
-          <option value="otherOption">Other option</option>
-          <option value="otherOption">Other option</option>
-          <option value="otherOption">Other option</option>
-        </select>
-
-        <h1 className='pt-3 text-xl md:p-2'>Product Description</h1>
+        <h1 className='pt-3 text-xl md:p-2'>Nursery Details</h1>
         <ReactQuill theme="snow" />
         {/* https://github.com/zenoamaro/react-quill  // how to use see here */}
 
-        <h1 className='pt-3 text-xl md:p-4'>Upload your gallery</h1>
+        <h1 className='pt-3 text-xl md:p-4'>Upload your Nurcery Gallery</h1>
         <Upload
           action="https://run.mocky.io/v3/435e224c-44fb-4773-9faf-380c5e6a2188"
           listType="picture-card"
@@ -111,4 +103,4 @@ function Addplant() {
   )
 }
 
-export default Addplant
+export default Yournurcery
