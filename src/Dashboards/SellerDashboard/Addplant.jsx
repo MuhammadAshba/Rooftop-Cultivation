@@ -67,6 +67,9 @@ function Addplant() {
 
         <h1 className='pt-3 text-xl md:p-2'>Enter Price</h1>
         <input className='inline p-2 border-2 rounded-xl w-[100%]' type="text" placeholder='Product price' />
+      
+        <h1 className='pt-3 text-xl md:p-2'>Enter Stock</h1>
+        <input className='inline p-2 border-2 rounded-xl w-[100%]' type="number" placeholder='Total inventory of this product' />
 
         <h1 className='pt-3 text-xl md:p-2'>Choose category</h1>
         <select className='inline p-2 border-2 rounded-xl w-[100%]'>
